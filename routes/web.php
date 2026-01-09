@@ -18,6 +18,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('product',[ProductController::class,'index'])->name('product.index');
     Route::post('/product',[ProductController::class,'Store'])->name('product.store');
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+    Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
+    Route::delete('/product/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
 });
 
 require __DIR__.'/settings.php';
