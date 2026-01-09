@@ -88,7 +88,7 @@ export default function Index() {
                                         {product.description}
                                     </TableCell>
                                     <TableCell className='text-center space-x-2'>
-                                        <Button className='bg-slate-600 hover:bg-slate-800'>Edit</Button>
+                                        <Link href={route('product.edit',product.id)}><Button className='bg-slate-600 hover:bg-slate-800'>Edit</Button></Link>
                                        <Button disabled={processing} onClick={()=>handleDelete(product.id,product.name)} className='bg-red-500 hover:bg-red-800 *:'>Delete</Button>
                                     </TableCell>
                                 </TableRow>
